@@ -1,10 +1,10 @@
-import { Statistics } from './Statistics/Statistics';
+import { Feedback } from './Feedback';
 import data from '../assets/data.json';
 
 export const App = () => {
   return (
     <>
-      <Statistics title="Upload stats" stats={data} />
+      <Feedback title="Upload stats" stats={data} />
     </>
   );
 };
