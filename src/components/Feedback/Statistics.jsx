@@ -1,20 +1,29 @@
+import { PropTypes } from 'prop-types';
 import { Box } from 'components/Box';
 import { TextStyled } from './Feedback.styled';
 
-export const Statistics = ({ isEmptyState, keyMap, getStateValue }) => {
-  {
-    return isEmptyState ? (
-      <TextStyled fontWeight="bold" fontSize="m">
-        There is no feedback
-      </TextStyled>
-    ) : (
-      <Box>
-        {keyMap.map(item => (
-          <TextStyled key={item}>
-            {item}: {getStateValue(item)}
-          </TextStyled>
-        ))}
-      </Box>
-    );
-  }
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
+  return (
+    <Box>
+      <TextStyled>Good: {good}</TextStyled>
+      <TextStyled>Neutral: {neutral}</TextStyled>
+      <TextStyled>Bad: {bad}</TextStyled>
+      <TextStyled>Total: {total}</TextStyled>
+      <TextStyled>Positive feedback: {positivePercentage}</TextStyled>
+    </Box>
+  );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.string.isRequired,
 };
