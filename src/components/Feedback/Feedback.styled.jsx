@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, typography } from 'styled-system';
+import { typography } from 'styled-system';
 
 export const TitleStyled = styled.h2`
   font-size: ${p => p.theme.fontSizes.m};
