@@ -15,7 +15,7 @@ export const Statistics = ({
       <TextStyled>Neutral: {neutral}</TextStyled>
       <TextStyled>Bad: {bad}</TextStyled>
       <TextStyled>Total: {total}</TextStyled>
-      <TextStyled>Positive feedback: {positivePercentage}</TextStyled>
+      <TextStyled>Positive feedback: {positivePercentage}%</TextStyled>
     </Box>
   );
 };
@@ -25,5 +25,5 @@ Statistics.propTypes = {
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.string.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
